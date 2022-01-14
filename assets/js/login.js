@@ -37,7 +37,7 @@ $(function () {
                 password: pwd
             },
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layer.msg(res.message)
                 }
                 $('#form-reg')[0].reset()
@@ -60,7 +60,7 @@ $(function () {
                 password: pwd
             },
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layer.msg(res.message)
                 }
                 layer.msg('登陆成功！')

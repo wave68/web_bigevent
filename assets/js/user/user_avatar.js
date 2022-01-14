@@ -20,7 +20,7 @@ $(function () {
         // 获取选择文件
         var filelist = e.target.files
         console.log(filelist)
-        if (filelist.length == 0) {
+        if (filelist.length === 0) {
             return layer.msg('请选择图片！')
         }
         var file = filelist[0]
@@ -46,7 +46,7 @@ $(function () {
                 avatar: dataURL
             },
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layer.msg('更新头像失败！')
                 }
                 layer.msg('更新头像成功！')

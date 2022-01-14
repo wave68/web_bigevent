@@ -7,19 +7,18 @@ $(function () {
             }
         }
     });
-    var userinfo = ''
+
     // 初始化用户基本信息
     function initUserInfo() {
         $.ajax({
             method: 'GET',
             url: '/my/userinfo',
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layui.layer.msg('获取用户信息失败！')
                 }
                 //给表单赋值
                 form.val("formUserInfo", res.data);
-                userinfo = res.data
             }
         })
     }
@@ -31,7 +30,7 @@ $(function () {
             url: '/my/userinfo',
             data: data.field,
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layui.layer.msg('更新用户信息失败！')
                 }
                 layui.layer.msg('更新用户信息成功！')

@@ -19,7 +19,7 @@ $(function () {
             url: '/my/updatepwd',
             data: data.field,
             success: function (res) {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     return layui.layer.msg('更新密码失败！')
                 }
                 layui.layer.msg('更新密码成功！')
