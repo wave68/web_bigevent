@@ -28,7 +28,6 @@ function getUserInfo() {
 function renderAvatar(user) {
     var name = user.nickname || user.username
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
-    // user.user_pic = '//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg'
     if (user.user_pic) {
         $('.layui-nav-img')
             .attr('src', user.user_pic)

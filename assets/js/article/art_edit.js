@@ -43,7 +43,13 @@ $(function () {
                 }
                 //给表单赋值
                 form.val("formArticle", res.data);
-                tinymce.activeEditor.setContent(res.data['content'])
+                // tinymce.activeEditor.setContent(res.data['content'])
+                // 图片转换成路径
+                var newImgURL = config.baseUrl + res.data['cover_img']
+                $image
+                    .cropper('destroy')      // 销毁旧的裁剪区域
+                    .attr('src', newImgURL)  // 重新设置图片路径
+                    .cropper(options)        // 重新初
             }
         })
     }

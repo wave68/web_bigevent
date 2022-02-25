@@ -64,7 +64,6 @@ $(function () {
                     return layer.msg(res.message)
                 }
                 layer.msg('登陆成功！')
-                console.log(res.token)
                 localStorage.setItem('token',res.token)
                 location.href = './index.html'
             }
